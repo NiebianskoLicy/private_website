@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Robert Nosal CV</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		{% block styles %}
+    	{{ bootstrap.load_css() }}
+		<link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='assets/favicon.ico') }}"
+    />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
+		<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='assets/js/jquery.poptrox.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+		<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+		{% endblock %}
+	</head>
+	<body class="">
+
+		<!-- Header -->
+			<header id="header" style="background-position: left 0px;">
+				<div class="inner">
+					<a href="http://127.0.0.1:5001/#" class="image avatar"><img src="static/images/avatar.jpg" alt="CV image"></a>
+					<h1><strong>I am Robert Nosal</strong>, a begginer self-taught programmer.</h1>
+				</div>
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						
+						<li><a href="https://github.com/NiebianskoLicy" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						
+						<li><a href="mailto:#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>© Untitled</li><li>Design: <a href="http://html5up.net/">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+			</header>
+	</body>
+</html>

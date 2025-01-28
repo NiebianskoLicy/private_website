@@ -1,0 +1,33 @@
+{% from "bootstrap5/form.html" import render_form %}
+{% block content %}
+{%include "header.html" %}
+
+<div id="main">
+    <main class="mb-4">
+        <div class="container">
+
+            <div class="row">
+                <div class="page-heading">
+                {% if is_edit: %}
+                <h1>Edit Post</h1>
+                {% else: %}
+                <h1>New Post</h1>
+                {% endif %}
+                </div>
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% for category, message in messages %}
+                <div class="{{ category }}">{{ message }}</div>
+                {% endfor %}
+                {% endwith %}
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    {{ ckeditor.load() }}
+                    {{ ckeditor.config(name='body') }}
+                    {{render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+                </div>
+                
+            </div>
+        </div>
+    </main>
+</div>
+
+{% endblock %}
