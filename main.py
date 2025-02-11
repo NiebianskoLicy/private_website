@@ -87,7 +87,6 @@ def delete_post(post_id):
     db.session.commit()
     return redirect(url_for('home'))
 
-# TODO fix editing post
 
 @app.route("/edit-post/<int:post_id>", methods=["GET", "POST"])
 def edit_post(post_id):
